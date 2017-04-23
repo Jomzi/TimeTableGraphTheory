@@ -1,0 +1,651 @@
+MATCH  (st:Staff {Staff: "Damien Costello"} ), 
+       (act:Activity {Module: "Professional Practice"} )	   
+CREATE (st)-[r:Lectures]->(act)
+ 
+************************************************************************************************
+//monday   module-roomno rel
+	   
+MATCH  (a:Activity {Module: "Graph Theory"} ), 
+       (ro:Room {RoomNo: "0145"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+
+MATCH  (a:Activity {Module: "Database MGMT"} ), 
+       (ro:Room {RoomNo: "0994"} )	   
+CREATE (a)-[r:In]->(ro)
+
+MATCH  (a:Activity {Module: "Mobile Apps"} ), 
+       (ro:Room {RoomNo: "0223"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Graph Theory"} ), 
+       (ro:Room {RoomNo: "PF05"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Software Testing"} ), 
+       (ro:Room {RoomNo: "0481 CR4"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Server Side Rad"} ), 
+       (ro:Room {RoomNo: "PF05"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+*****************************************************************************************************
+
+//tuesday module-roomno rel
+
+
+MATCH  (a:Activity {Module: "Software Testing"} ), 
+       (ro:Room {RoomNo: "0436 CR5 Projects/Media"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+
+MATCH  (a:Activity {Module: "Database MGMT"} ), 
+       (ro:Room {RoomNo: "0481 CR4"} )	   
+CREATE (a)-[r:In]->(ro)
+
+MATCH  (a:Activity {Module: "Mobile Apps"} ), 
+       (ro:Room {RoomNo: "0470 Computing Practical Lab"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Database MGMT"} ), 
+       (ro:Room {RoomNo: "0482 CR3"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Graph Theory"} ), 
+       (ro:Room {RoomNo: "0379"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Software Testing"} ), 
+       (ro:Room {RoomNo: "0436 CR5 Projects/Media"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Server Side Rad"} ), 
+       (ro:Room {RoomNo: "0436 CR5 Projects/Media"} )	   
+CREATE (a)-[r:In]->(ro)
+
+
+************************************************************************************************
+
+//wednesday module-roomno rel
+
+
+MATCH  (a:Activity {Module: "Graph Theory"} ), 
+       (ro:Room {RoomNo: "0162"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+
+MATCH  (a:Activity {Module: "Graph Theory"} ), 
+       (ro:Room {RoomNo: "0938"} )	   
+CREATE (a)-[r:In]->(ro)
+
+MATCH  (a:Activity {Module: "Professional Practice"} ), 
+       (ro:Room {RoomNo: "0208"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Server Side Rad"} ), 
+       (ro:Room {RoomNo: "0997"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Software Testing"} ), 
+       (ro:Room {RoomNo: "0994"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Software Testing"} ), 
+       (ro:Room {RoomNo: "0939"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Database MGMT"} ), 
+       (ro:Room {RoomNo: "0995"} )	   
+CREATE (a)-[r:In]->(ro)
+
+
+
+********************************************************************************
+
+
+//Thursday module-roomno rel
+
+
+
+MATCH  (a:Activity {Module: "Mobile Apps"} ), 
+       (ro:Room {RoomNo: "P18"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+
+MATCH  (a:Activity {Module: "Mobile Apps"} ), 
+       (ro:Room {RoomNo: "P18"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Database MGMT"} ), 
+       (ro:Room {RoomNo: "0483 CR2"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Server Side Rad"} ), 
+       (ro:Room {RoomNo: "0436 CR5 Projects/Media"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+
+*******************************************************************************************88
+
+//FRIDAY module-roomno rel
+
+
+MATCH  (a:Activity {Module: "Database MGMT"} ), 
+       (ro:Room {RoomNo: "0482 CR3"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+
+MATCH  (a:Activity {Module: "Graph Theory"} ), 
+       (ro:Room {RoomNo: "0208"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+MATCH  (a:Activity {Module: "Server Side Rad"} ), 
+       (ro:Room {RoomNo: "0484 CR1"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+******************************************************************************************
+//Monday
+//Create group relationship between schedule
+MATCH  (g:Group {Group: "A"} ), 
+       (sch:Schedule )
+where  ID(sch) = 54	   
+CREATE (g)-[r:Attends]->(sch)
+
+
+MATCH  (g:Group {Group: "A"} ), 
+       (sch:Schedule )
+where  ID(sch) = 58	   
+CREATE (g)-[r:Attends]->(sch)
+
+
+
+MATCH  (g:Group {Group: "A"} ), 
+       (sch:Schedule )
+where  ID(sch) = 59	   
+CREATE (g)-[r:Attends]->(sch)
+
+
+MATCH  (g:Group {Group: "C"} ), 
+       (sch:Schedule )
+where  ID(sch) = 60	   
+CREATE (g)-[r:Attends]->(sch)
+
+
+******************************************************************************************
+//tuesday
+
+
+MATCH  (g:Group {Group: "C"} ), 
+       (sch:Schedule )
+where  ID(sch) = 61	   
+CREATE (g)-[r:Attends]->(sch)
+
+
+MATCH  (g:Group {Group: "A"} ), 
+       (sch:Schedule )
+where  ID(sch) = 62	   
+CREATE (g)-[r:Attends]->(sch)
+
+
+MATCH  (g:Group {Group: "A"} ), 
+       (sch:Schedule )
+where  ID(sch) = 63	   
+CREATE (g)-[r:Attends]->(sch)
+
+
+MATCH  (g:Group {Group: "C"} ), 
+       (sch:Schedule )
+where  ID(sch) = 64	   
+CREATE (g)-[r:Attends]->(sch)
+
+MATCH  (g:Group {Group: "B"} ), 
+       (sch:Schedule )
+where  ID(sch) = 65   
+CREATE (g)-[r:Attends]->(sch)
+
+
+MATCH  (g:Group {Group: "B"} ), 
+       (sch:Schedule )
+where  ID(sch) = 66   
+CREATE (g)-[r:Attends]->(sch)
+
+
+MATCH  (g:Group {Group: "B"} ), 
+       (sch:Schedule )
+where  ID(sch) = 67   
+CREATE (g)-[r:Attends]->(sch)
+
+*******************************************************************************************************************************
+
+//Wednesday
+
+MATCH  (g:Group {Group: "C"} ), 
+       (sch:Schedule )
+where  ID(sch) = 68  
+CREATE (g)-[r:Attends]->(sch)
+
+**************************************************************************************************************************
+
+//Thursday
+
+MATCH  (g:Group {Group: "B"} ), 
+       (sch:Schedule )
+where  ID(sch) = 73  
+CREATE (g)-[r:Attends]->(sch)
+
+
+MATCH  (g:Group {Group: "C"} ), 
+       (sch:Schedule )
+where  ID(sch) = 74  
+CREATE (g)-[r:Attends]->(sch)
+
+
+MATCH  (g:Group {Group: "C"} ), 
+       (sch:Schedule )
+where  ID(sch) = 75  
+CREATE (g)-[r:Attends]->(sch)
+
+MATCH  (g:Group {Group: "A"} ), 
+       (sch:Schedule )
+where  ID(sch) = 76  
+CREATE (g)-[r:Attends]->(sch)
+
+
+**************************************************************************************************************************
+
+//FRIDAY
+
+MATCH  (g:Group {Group: "B"} ), 
+       (sch:Schedule )
+where  ID(sch) = 77  
+CREATE (g)-[r:Attends]->(sch)
+
+*******************************************************************************************************************************
+//Creating time day semester module rel
+
+//CREATE (s:Semester {Name: "Spring", Weeks: "22-33,36"} );
+
+
+//Monday
+
+MATCH  (st:Time {Time: 9} ), 
+       (et:Time {Time: 10} ),
+	   (da:Day {Day: "Monday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Graph Theory"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch)
+	   
+MATCH  (st:Time {Time: 10} ), 
+       (et:Time {Time: 11} ),
+	   (da:Day {Day: "Monday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Database MGMT"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch)
+	   
+	   
+MATCH  (st:Time {Time: 12} ), 
+       (et:Time {Time: 14} ),
+	   (da:Day {Day: "Monday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Mobile Apps"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch)
+	   
+MATCH  (st:Time {Time: 14} ), 
+       (et:Time {Time: 15} ),
+	   (da:Day {Day: "Monday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Graph Theory"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);   
+	   
+MATCH  (st:Time {Time: 16} ), 
+       (et:Time {Time: 18} ),
+	   (da:Day {Day: "Monday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Software Testing"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);  
+	   
+MATCH  (st:Time {Time: 16} ), 
+       (et:Time {Time: 18} ),
+	   (da:Day {Day: "Monday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Server Side Rad"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);  
+*****************************************************************************************************************************
+//tuesday
+MATCH  (st:Time {Time: 9} ), 
+       (et:Time {Time: 11} ),
+	   (da:Day {Day: "Tuesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Software Testing"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);  
+	   
+MATCH  (st:Time {Time: 9} ), 
+       (et:Time {Time: 11} ),
+	   (da:Day {Day: "Tuesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Database MGMT"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch); 	   
+
+MATCH  (st:Time {Time: 11} ), 
+       (et:Time {Time: 13} ),
+	   (da:Day {Day: "Tuesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Mobile Apps"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);
+
+MATCH  (st:Time {Time: 11} ), 
+       (et:Time {Time: 13} ),
+	   (da:Day {Day: "Tuesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Database MGMT"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);
+	   
+MATCH  (st:Time {Time: 12} ), 
+       (et:Time {Time: 13} ),
+	   (da:Day {Day: "Tuesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Graph Theory"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);
+
+
+
+	   
+MATCH  (st:Time {Time: 14} ), 
+       (et:Time {Time: 16} ),
+	   (da:Day {Day: "Tuesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Software Testing"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);
+	   
+MATCH  (st:Time {Time: 16} ), 
+       (et:Time {Time: 18} ),
+	   (da:Day {Day: "Tuesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Server Side Rad"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);
+
+
+************************************************************************************************
+//wednesday
+
+
+MATCH  (st:Time {Time: 9} ), 
+       (et:Time {Time: 10} ),
+	   (da:Day {Day: "Wednesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Graph Theory"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);
+	   
+	   
+MATCH  (st:Time {Time: 10} ), 
+       (et:Time {Time: 11} ),
+	   (da:Day {Day: "Wednesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Graph Theory"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);
+	   
+	   
+MATCH  (st:Time {Time: 11} ), 
+       (et:Time {Time: 12} ),
+	   (da:Day {Day: "Wednesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Professional Practice"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);
+
+MATCH  (st:Time {Time: 13} ), 
+       (et:Time {Time: 14} ),
+	   (da:Day {Day: "Wednesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Server Side Rad"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);
+
+MATCH  (st:Time {Time: 14} ), 
+       (et:Time {Time: 15} ),
+	   (da:Day {Day: "Wednesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Server Side Rad"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);
+
+MATCH  (st:Time {Time: 15} ), 
+       (et:Time {Time: 16} ),
+	   (da:Day {Day: "Wednesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Server Side Rad"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);	   
+
+
+MATCH  (st:Time {Time: 16} ), 
+       (et:Time {Time: 17} ),
+	   (da:Day {Day: "Wednesday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Database MGMT"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);	   	   
+
+***************************************************************************************************
+//Thursday
+
+MATCH  (st:Time {Time: 9} ), 
+       (et:Time {Time: 11} ),
+	   (da:Day {Day: "Thursday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Mobile Apps"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);	   
+	   
+	   
+MATCH  (st:Time {Time: 11} ), 
+       (et:Time {Time: 13} ),
+	   (da:Day {Day: "Thursday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Mobile Apps"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);	   
+	  
+
+MATCH  (st:Time {Time: 14} ), 
+       (et:Time {Time: 16} ),
+	   (da:Day {Day: "Thursday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Database MGMT"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);	   
+
+
+MATCH  (st:Time {Time: 14} ), 
+       (et:Time {Time: 16} ),
+	   (da:Day {Day: "Thursday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Server Side Rad"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);	   
+
+************************************************************************************************************
+
+
+//Friday
+
+MATCH  (st:Time {Time: 9} ), 
+       (et:Time {Time: 11} ),
+	   (da:Day {Day: "Friday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Database MGMT"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);	  
+
+
+MATCH  (st:Time {Time: 11} ), 
+       (et:Time {Time: 12} ),
+	   (da:Day {Day: "Friday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Graph Theory"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);	   
+
+MATCH  (st:Time {Time: 14} ), 
+       (et:Time {Time: 18} ),
+	   (da:Day {Day: "Friday"}),
+       (sem:Semester {Semester: "Spring"}),
+       (act:Activity {Module: "Server Side Rad"} )	   
+CREATE (sch:Schedule) -[rs:STARTS_AT]->(st),
+       (sch)-[day:DAY_ON]->(da),
+       (sch)-[re:ENDS_AT]->(et),
+       (sch)-[rsem:TAKES_PLACE_DURING]->(sem),
+       (act)-[rsch:OCCURS_ON]->(sch);	    	   
+
+
+
+
+***********************************************************************************************8	   
+	   //all activities 
+	   MATCH (a:Activity)-[r1]->(s)-[r2]->(n)  RETURN a, r1, s, r2, n
+	   //search for module
+	   MATCH (a:Activity{Module: Graph Theory})-[r1]->(s)-[r2]->(n)  RETURN a, r1, s, r2, n
+	   
+	   
+	   
+//create relationship between staff and activities
+
+MATCH  (st:Staff {Staff: "Ian McLoughln"} ), 
+       (act:Activity {Module: "Graph Theory"} )	   
+CREATE (st)-[r:Lectures]->(act)
+       
+	   
+MATCH  (st:Staff {Staff: "Damien Costello"} ), 
+       (act:Activity {Module: "Mobile Apps"} )	   
+CREATE (st)-[r:Lectures]->(act)	
+
+MATCH  (st:Staff {Staff: "Deirdre ODonovan"} ), 
+       (act:Activity {Module: "Database MGMT"} )	   
+CREATE (st)-[r:Lectures]->(act)	
+
+MATCH  (st:Staff {Staff: "Patrick Mannion"} ), 
+       (act:Activity {Module: "Database MGMT"} )	   
+CREATE (st)-[r:Lectures]->(act)
+
+MATCH  (st:Staff {Staff: "Martin Hynes"} ), 
+       (act:Activity {Module: "Software Testing"} )	   
+CREATE (st)-[r:Lectures]->(act)
+
+MATCH  (st:Staff {Staff: "Naomi Regan - Hurley"} ), 
+       (act:Activity {Module: "Software Testing"} )	   
+CREATE (st)-[r:Lectures]->(act)
+
+//query act and sch to get id's
+match (a:Activity )-[oc:OCCURS_ON]->(s) return a,s,oc
+
+
+//Create group relationship between schedule
+MATCH  (g:Group {Group: "A"} ), 
+       (sch:Schedule )
+where  ID(sch) = 54	   
+CREATE (g)-[r:Attends]->(sch)
+
+ MATCH (a:Activity)-[r1]->(s)<-[r2]-(n)  RETURN a, r1, s, r2, n
+ 
+ //room- lect rel
+MATCH  (a:Activity {Module: "Graph Theory"} ), 
+       (ro:Room {RoomNo: "0145"} )	   
+CREATE (a)-[r:In]->(ro)	
+
+
+///delete rel
+match (s:Staff)-[r]->(n)  where ID(s) = 44 delete r,s

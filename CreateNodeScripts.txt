@@ -1,0 +1,77 @@
+CREATE (t: Time{Time: 9});
+CREATE (t: Time{Time: 10});
+CREATE (t: Time{Time: 11});
+CREATE (t: Time{Time: 12});
+CREATE (t: Time{Time: 13});
+CREATE (t: Time{Time: 14});
+CREATE (t: Time{Time: 15});
+CREATE (t: Time{Time: 16});
+CREATE (t: Time{Time: 17});
+CREATE (t: Time{Time: 18});
+CREATE (t: Time{Time: 19});
+CREATE (t: Time{Time: 20});
+CREATE (t: Time{Time: 21});
+
+CREATE (program:Program { Id:"KSOFG73",Name:"BSC Computing in Software Development", Department: "Computer Science & Applied Physics", Level:7 , Year: 3, Semister:6});
+
+
+CREATE(a:Activity {Module: 'Software Testing', Type: 'L/P'});
+CREATE(a:Activity {Module: 'Graph Theory', Type: 'L/P'});
+CREATE(a:Activity {Module: 'Mobile Apps', Type: 'L/P'});
+CREATE(a:Activity {Module: 'Database MGMT', Type: 'L/P'});
+CREATE(a:Activity {Module: 'Server Side Rad', Type: 'L/P'});
+CREATE(a:Activity {Module: 'Professional Practice', Type: 'L/P'});
+
+
+CREATE(r:Room {RoomNo: '0145'});
+CREATE(r:Room {RoomNo: "0994"});
+CREATE(r:Room {RoomNo: '0223'});
+CREATE(r:Room {RoomNo: 'PF05'});
+CREATE(r:Room {RoomNo: '0481 CR4'});
+CREATE(r:Room {RoomNo: '0436 CR5 Projects/Media'});
+CREATE(r:Room {RoomNo: '0470 Computing Practical Lab'});
+CREATE(r:Room {RoomNo: '0482 CR3'});
+CREATE(r:Room {RoomNo: '0379'});
+CREATE(r:Room {RoomNo: '0162'});
+CREATE(r:Room {RoomNo: '0938'});
+CREATE(r:Room {RoomNo: '0208'});
+CREATE(r:Room {RoomNo: '0997'});
+CREATE(r:Room {RoomNo: '0939'});
+CREATE(r:Room {RoomNo: '0995'});
+CREATE(r:Room {RoomNo: 'P18'});
+CREATE(r:Room {RoomNo: '0483 CR2'});
+CREATE(r:Room {RoomNo: '0484 CR1'});
+
+
+CREATE(s:Staff {Staff: 'Ian McLoughln'});
+CREATE(s:Staff {Staff: 'Damien Costello'});
+CREATE(s:Staff {Staff: 'Gerard Harrison'});
+CREATE(s:Staff {Staff: 'Naomi Regan - Hurley'});
+CREATE(s:Staff {Staff: 'Deirdre ODonovan'});
+CREATE(s:Staff {Staff: 'Martin Hynes'});
+CREATE(s:Staff {Staff: 'Patrick Mannion'});
+CREATE(s:Staff {Staff: 'Ian McLoughln'});
+
+CREATE(g:Group {Group: 'A'});
+CREATE(g:Group {Group: 'B'});
+CREATE(g:Group {Group: 'C'});
+
+CREATE(s:Semester {Semester: 'Spring',Weeks: "22-33,36"});
+
+
+
+CREATE(d:Day {Day: 'Monday'});
+CREATE(d:Day {Day: 'Tuesday'});
+CREATE(d:Day {Day: 'Wednesday'});
+CREATE(d:Day {Day: 'Thursday'});
+CREATE(d:Day {Day: 'Friday'});
+
+
+	   
+
+	   
+
+
+
+
+
